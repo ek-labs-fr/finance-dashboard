@@ -1,4 +1,82 @@
 /* PrimeNG Icons */
 @import "primeicons/primeicons.css";
 
-/* You can add global styles to this file, and also import other style files */
+/* Custom CSS Variables */
+:root {
+  --finance-primary: #1e3a5f;
+  --finance-primary-light: #2d4a6f;
+  --finance-primary-dark: #0f2847;
+  --finance-accent: #3b82f6;
+  --finance-success: #10b981;
+  --finance-danger: #ef4444;
+  --finance-warning: #f59e0b;
+  --finance-surface: #f8fafc;
+  --finance-surface-dark: #f1f5f9;
+  --finance-border: #e2e8f0;
+  --finance-text: #1e293b;
+  --finance-text-muted: #64748b;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--finance-surface);
+  color: var(--finance-text);
+}
+
+/* PrimeNG Table Customization */
+.p-datatable {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: var(--finance-primary) !important;
+  color: white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border: none !important;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  transition: background-color 0.15s ease;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: var(--finance-surface-dark) !important;
+}
+
+/* Card Customization */
+.p-card {
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--finance-border);
+}
+
+/* Button Customization */
+.p-button {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Tag Customization */
+.p-tag {
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
